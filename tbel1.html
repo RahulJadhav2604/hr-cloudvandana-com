@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="tabel1.css">
+    <title>table</title>
+</head>
+>
+        <script>
+            
+            function addRowATBottom()
+            {
+                // get input values
+                var sno = document.getElementById('sno').value;
+                var fname = document.getElementById('fname').value;
+                 var lname = document.getElementById('lname').value;
+                  var city = document.getElementById('city').value;
+                  var country = document.getElementById('country').value;
+                  
+                  // get the html table
+                  // 0 = the first table
+                  var table = document.getElementsByTagName('table')[0];
+                  
+                  // add new empty row to the table
+                  // 0 = in the top 
+                  // table.rows.length = the end
+                  // table.rows.length/2+1 = the center
+                   // tabel.insertaRow=1 for bvelow thw head line
+                  var newRow = table.insertRow(table.rows.length);
+                  
+                  // add cells to the row
+                  var cel1 = newRow.insertCell(0);
+                  var cel2 = newRow.insertCell(1);
+                  var cel3 = newRow.insertCell(2);
+                  var cel4 = newRow.insertCell(3);
+                  var cel5 = newRow.insertCell(4);
+                  
+                  // add values to the cells
+                  cel1.innerHTML = sno;
+                  cel2.innerHTML = fname;
+                  cel3.innerHTML =lname;
+                  cel4.innerHTML =city;
+                  cel5.innerHTML = country;
+
+            }
+            function addRowATTop()
+            {
+                // get input values
+                var sno = document.getElementById('sno').value;
+                var fname = document.getElementById('fname').value;
+                 var lname = document.getElementById('lname').value;
+                  var city = document.getElementById('city').value;
+                  var country = document.getElementById('country').value;
+                  
+                  // get the html table
+                  // 0 = the first table
+                  var table = document.getElementsByTagName('table')[0];
+                  
+                  // add new empty row to the table
+                  // 0 = in the top 
+                  // table.rows.length = the end
+                  // table.rows.length/2+1 = the center
+                   // tabel.insertaRow=1 for bvelow thw head line
+                  var newRow = table.insertRow(1);
+                  
+                  // add cells to the row
+                  var cel1 = newRow.insertCell(0);
+                  var cel2 = newRow.insertCell(1);
+                  var cel3 = newRow.insertCell(2);
+                  var cel4 = newRow.insertCell(3);
+                  var cel5 = newRow.insertCell(4);
+                  
+                  // add values to the cells
+                  cel1.innerHTML = sno;
+                  cel2.innerHTML = fname;
+                  cel3.innerHTML =lname;
+                  cel4.innerHTML =city;
+                  cel5.innerHTML = country;
+
+            }
+            
+        </script>
+        
+    </head>
+
+    <body>
+        SL.NO :<input type="number" name="sno" id="sno"/><br/><br/>
+        First Name: <input type="text" name="fname" id="fname" /><br/><br/>
+        Last Name: <input type="text" name="lname" id="lname" /><br/><br/>
+        city <input type="text" name="city" id="city" /><br/><br/>
+       country <input type="text" name="country" id="country" /><br/><br/>
+        <button onclick="addRowATBottom();">Add Row At Bottom</button><br/><br/>
+        <button onclick="addRowATTop();">Add Row At Top</button><br/><br/>
+        <table>
+            
+            <tr>
+                <th>SL.NO</th>
+                <th>First Name</th>
+                <th>Last Name </th>
+                <th>City </th>
+                <th>Country </th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td> Rahul </td>
+                <td>Jadhav</td>
+                <td>Hyderabad</td>
+                <td>India</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>somesh</td>
+                <td>Kumar</td>
+                <td>Mumbai</td>
+                <td>India</td>
+              </tr>
+              <tr>
+                  <td>3</td>
+                  <td>Rakesh</td>
+                  <td>Yadhav</td>
+                  <td>Lucknow</td>
+                  <td>India</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Vicky</td>
+                  <td>Aurora</td>
+                  <td>pune</td>
+                  <td>India</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>Adhil</td>
+                  <td>khan</td>
+                  <td>Hyderabad</td>
+                  <td>India</td>
+                </tr>
+        </table>
+
+    </body>
+
+</html>
